@@ -18,7 +18,9 @@ public class Potter {
         double price = 0;
 
         for (int i = 0; i < books.size(); i++) {
-            Set<Integer> uniqueBooks = new HashSet<>(books);
+            //Set<Integer> uniqueBooks = new HashSet<>(books);
+            Set uniqueBooks = new HashSet(books);
+
 
             price += book_price * uniqueBooks.size() * (1 - discountFor.get(uniqueBooks.size()));
             /*
