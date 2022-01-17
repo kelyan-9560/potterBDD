@@ -35,4 +35,26 @@ public class Potter {
         return price;
     }
 
+    private int[] remove(int[] array, int index){
+        int[] copy = new int[array.length - 1];
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (i != index) {
+                copy[j++] = array[i];
+            }
+        }
+        return copy;
+    }
+
+    private int[] removeItem(int[] shoppingBasket, int[] unique){
+        for (int k : unique) {
+            for (int j = 0; j < shoppingBasket.length; j++) {
+                if (shoppingBasket[j] == k) {
+                    shoppingBasket = remove(shoppingBasket, j);
+                    break;
+                }
+            }
+        }
+        return shoppingBasket;
+    }
+
 }
