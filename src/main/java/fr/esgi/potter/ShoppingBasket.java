@@ -63,4 +63,11 @@ public class ShoppingBasket {
         return copy;
     }
 
+    public int[] getShoppingBasket() {
+        return shoppingBasket;
+    }
+
+    public void setShoppingBasket(int[] shoppingBasket) {
+        this.shoppingBasket = shoppingBasket;
+    }
 }

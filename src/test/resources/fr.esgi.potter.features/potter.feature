@@ -1,7 +1,4 @@
-Feature: Price
-        In order to buy Potter books
-        As customer
-        I want to know the price the price of my basket
+Feature: Price of a shopping basket
 
   Scenario: 1 book cost 8
     Given 1 book
@@ -30,51 +27,52 @@ Feature: Price
 
 
 
-  Scenario: 1 collection whith 1 book
-    Given 1 book
-    When add to my shooping basket
-    Then the book should cost 8
 
-  Scenario: 1 collection whith 2 books
+  Scenario: 1 collection with 1 book
+    Given 1 different books
+    When add the 1 different books to my shopping basket
+    Then the shopping basket should cost 8.0
+
+  Scenario: 1 collection with 2 books
     Given 2 different books
-    When add to my shooping basket
-    Then the books should cost 15.2
+    When add the 2 different books to my shopping basket
+    Then the shopping basket should cost 15.2
 
-  Scenario: 1 collection whith 3 books
+  Scenario: 1 collection with 3 books
     Given 3 different books
-    When add to my shooping basket
-    Then the books should cost 21.6
+    When add the 3 different books to my shopping basket
+    Then the shopping basket should cost 21.6
 
-  Scenario: 1 collection whith four books
+  Scenario: 1 collection with four books
     Given 4 different books
-    When add to my shooping basket
-    Then the books should cost 25.6
+    When add the 4 different books to my shopping basket
+    Then the shopping basket should cost 25.6
 
-  Scenario: 1 collection whith 5 books
+  Scenario: 1 collection with 5 books
     Given 5 different books
-    When add to my shooping basket
-    Then the books should cost 30
+    When add the 4 different books to my shopping basket
+    Then the shopping basket should cost 30
 
-  Scenario: 2 collections whith 5 and four books
-    Given a shooping basket with 2 collections
-    When add a collection whith 5 different books
+  Scenario: 2 collections with 5 and four books
+    Given a shopping basket with 2 collections
+    When add a collection with 5 different books
     And add a collection with four different books
-    Then the shooping basket should be at 65.6
+    Then the shopping basket should be at 65.6
 
-  Scenario: 2 collections whith 5 and 3 books
-    Given a shooping basket with 2 collections
-    When add a collection whith 5 different books
+  Scenario: 2 collections with 5 and 3 books
+    Given a shopping basket with 2 collections
+    When add a collection with 5 different books
     And add a collection with 3 different books
-    Then the shooping basket should be at 51.6
+    Then the shopping basket should be at 51.6
 
-  Scenario: 2 collections whith 5 and 2 books
-    Given a shooping basket with 2 collections
-    When add a collection whith 5 different books
+  Scenario: 2 collections with 5 and 2 books
+    Given a shopping basket with 2 collections
+    When add a collection with 5 different books
     And add a collection with 2 different books
-    Then the shooping basket should be at 45.2
+    Then the shopping basket should be at 45.2
 
-  Scenario: 2 collections whith 5 and 1 book
-    Given a shooping basket with 2 collections
-    When add a collection whith 5 different books
+  Scenario: 2 collections with 5 and 1 book
+    Given a shopping basket with 2 collections
+    When add a collection with 5 different books
     And add a collection with 1 books
-    Then the shooping basket should be at 38
+    Then the shopping basket should be at 38
