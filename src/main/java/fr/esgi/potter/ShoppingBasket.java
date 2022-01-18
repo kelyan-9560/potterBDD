@@ -1,8 +1,10 @@
+package fr.esgi.potter;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Potter {
+public class ShoppingBasket {
 
     private final Map<Integer, Double> discountFor = new HashMap<Integer, Double>() {
         {
@@ -17,9 +19,13 @@ public class Potter {
 
     private final int bookPrice = 8;
 
-    public Potter() {}
+    public int[] shoppingBasket;
 
-    public double price(int[] shoppingBasket) {
+    public ShoppingBasket(int[] basket) {
+        this.shoppingBasket = basket;
+    }
+
+    public double price() {
         double price = 0;
 
         if(shoppingBasket.length == 0) return price;
@@ -35,16 +41,6 @@ public class Potter {
         return price;
     }
 
-    private int[] remove(int[] array, int index){
-        int[] copy = new int[array.length - 1];
-        for (int i = 0, j = 0; i < array.length; i++) {
-            if (i != index) {
-                copy[j++] = array[i];
-            }
-        }
-        return copy;
-    }
-
     private int[] removeItem(int[] shoppingBasket, int[] unique){
         for (int k : unique) {
             for (int j = 0; j < shoppingBasket.length; j++) {
@@ -55,6 +51,16 @@ public class Potter {
             }
         }
         return shoppingBasket;
+    }
+
+    private int[] remove(int[] array, int index){
+        int[] copy = new int[array.length - 1];
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (i != index) {
+                copy[j++] = array[i];
+            }
+        }
+        return copy;
     }
 
 }
