@@ -21,9 +21,7 @@ public class ShoppingBasket {
 
     public int[] shoppingBasket;
 
-    public ShoppingBasket(int[] basket) {
-        this.shoppingBasket = basket;
-    }
+
 
     public double price() {
         double price = 0;
