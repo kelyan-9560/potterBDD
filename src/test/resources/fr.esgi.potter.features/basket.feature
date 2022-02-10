@@ -25,7 +25,7 @@ Feature: Price of a shopping basket
     When add to my shopping basket
     Then the book should cost 30
 
-  Scenario:
+Scenario:
     Given a shopping basket with [1, 2, 3, 4, 5, 1, 2, 3, 4]
     When add to my shopping basket
-    Then the book should cost 65.6
+    Then the book should cost 55.6
