@@ -1,5 +1,6 @@
 package fr.esgi.potter.features;
 
+import fr.esgi.potter.Books;
 import fr.esgi.potter.ShoppingBasket;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,13 +10,15 @@ import org.assertj.core.api.Assertions;
 public class MyStepdefs {
 
     ShoppingBasket shoppingBasket = new ShoppingBasket();
+    Books selectedBooks = new Books();
+
 
     @Given("a shopping basket with books [{int}]")
     public void aShoppingBasketWithBooks(int arg0) {
         int[] books = {
                 arg0
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
     }
 
 
@@ -25,7 +28,7 @@ public class MyStepdefs {
                 arg0,
                 arg1
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
     }
 
     @Given("a shopping basket with books [{int}, {int}, {int}]")
@@ -35,7 +38,7 @@ public class MyStepdefs {
                 arg1,
                 arg2
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
 
     }
 
@@ -47,7 +50,7 @@ public class MyStepdefs {
                 arg2,
                 arg3
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
 
     }
 
@@ -64,7 +67,7 @@ public class MyStepdefs {
                 arg7,
                 arg8
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
     }
 
     @Given("a shopping basket with books [{int}, {int}, {int}, {int}, {int}]")
@@ -76,13 +79,12 @@ public class MyStepdefs {
                 arg3,
                 arg4
         };
-        shoppingBasket.setShoppingBasket(books);
+        selectedBooks.setBooks(books);
     }
 
     @When("add to my shopping basket")
     public void addToMyShoppingBasket() {
-        //shoppingBasket.setShoppingBasket();
-        //todo a voir ce qui est fait ici
+        shoppingBasket.setShoppingBasket(selectedBooks.books);
     }
 
     @Then("the book should cost {double}")
