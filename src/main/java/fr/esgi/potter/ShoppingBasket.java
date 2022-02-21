@@ -35,7 +35,7 @@ public class ShoppingBasket {
 
             shoppingBasket = removeItem(shoppingBasket,unique);
         }
-fk:jsfsdf
+
         return price;
     }
 
